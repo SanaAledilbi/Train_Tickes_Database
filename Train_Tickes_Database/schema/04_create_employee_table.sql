@@ -2,12 +2,14 @@
 -- Stores employee information
 
 CREATE TABLE employee (
-    employeeID NUMBER PRIMARY KEY,
-    employeeName VARCHAR2(100),
-    employeePhone VARCHAR2(20),
-    employeeEmail VARCHAR2(100),
-    Job VARCHAR2(50),
-    trainID NUMBER(3),
-    salary NUMBER(10,2),
-    CONSTRAINT fk_employeeTrainID FOREIGN KEY (trainID) REFERENCES train(trainID)
+    employeeID INT,
+    employeeName VARCHAR(50)
+    VARCHAR(50)
+    employeeEmail VARCHAR(50) NOT NULL
+    Job VARCHAR(30) NOT NULL,
+    trainID INT,
+    salary INT,
+    
+    CONSTRAINT pk_employeeID1 PRIMARY KEY (employeeID)
+    CONSTRAINT fk_employeeTrainID1 FOREIGN KEY (trainID) REFERENCES train(trainID)
 );
