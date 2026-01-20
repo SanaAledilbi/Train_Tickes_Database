@@ -87,7 +87,7 @@ The database consists of 11 interconnected tables designed to eliminate redundan
 *(Exact table names and relationships are defined in the SQL scripts)*
 
 ### Entity-Relationship Diagram
-![ER Diagram](Train_Tickes_Database/images/er_diagram.png)
+![ER Diagram](Train_Tickes_Database/images/er_diagram.jpg)
 
 ### Database Schema
 ![Schema Diagram](Train_Tickes_Database/images/schema_diagram.png)
