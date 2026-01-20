@@ -2,13 +2,14 @@
 -- Stores trip cancellation records
 
 CREATE TABLE TripCancelation (
-    TicketID NUMBER PRIMARY KEY,
-    PassengerID NUMBER,
-    passengerPhone VARCHAR2(20),
-    passengerEmail VARCHAR2(100),
+    TicketID INT,
+    PassengerID INT,
+    passengerPhone VARCHAR (50) NOT NULL,
+    passengerEmail varchar(50) NOT NULL,
+    trainID INT,
+    TheReason VARCHAR(100) NOT NULL,
     PurchasedDate TIMESTAMP,
-    trainID NUMBER(3),
-    TheReason VARCHAR2(200),
-    -- Add foreign keys
-    CONSTRAINT fk_trainID_TC FOREIGN KEY (trainID) REFERENCES Train(trainID)
+    
+    CONSTRAINT fk_TicketIDCancel FOREIGN KEY (TicketID) REFERENCES Ticket (TicketID),
+    CONSTRAINT fk_PassengerIDcancel FOREIGN KEY (PassengerID) REFERENCES Passengers (PassengerID)
 );
